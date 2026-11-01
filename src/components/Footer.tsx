@@ -58,7 +58,7 @@ export const Footer: React.FC<{
                   onClick={() => onNavigateSection('about')}
                   className="hover:text-cyan-400 transition"
                 >
-                  About Dr. S. Pal, MDS
+                  About Dr. Amit Pal, MDS
                 </button>
               </li>
               <li>
@@ -106,11 +106,11 @@ export const Footer: React.FC<{
                 Shop No. 5, Soniya Budhiya Compound, LT Road, opp. Railway Station, Dahisar West, Mumbai 400068
               </p>
               <a
-                href="tel:+919820123456"
+                href="tel:+917977159187"
                 className="inline-flex items-center gap-2 text-white hover:text-emerald-400 font-bold text-sm transition"
               >
                 <Phone className="w-4 h-4 text-emerald-400" />
-                <span>+91 98201 23456</span>
+                <span>+91 79771 59187</span>
               </a>
               <button
                 onClick={onOpenBooking}

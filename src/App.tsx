@@ -57,7 +57,7 @@ export default function App() {
 
               {/* Doctor Subtext */}
               <p className="mt-3.5 sm:mt-5 text-sm sm:text-base lg:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed px-1">
-                Led by <strong>Dr. S. Pal (BDS, MDS Prosthodontics & Oral Implantology)</strong>. Advanced painless root canals, computer-guided dental implants, and laser whitening.
+                Led by <strong>Dr. Amit Pal (BDS, MDS Prosthodontics & Oral Implantology)</strong>. Advanced painless root canals, computer-guided dental implants, and laser whitening.
               </p>
 
               {/* Action Buttons: Book Priority Appointment & Call Us */}
@@ -71,11 +71,11 @@ export default function App() {
                 </button>
 
                 <a
-                  href="tel:+919820123456"
+                  href="tel:+917977159187"
                   className="w-full sm:w-auto px-6 py-3.5 rounded-2xl text-sm font-bold text-slate-800 bg-white hover:bg-slate-100 active:bg-slate-200 border border-slate-300/80 shadow-xs transition flex items-center justify-center gap-2.5 cursor-pointer group"
                 >
                   <Phone className="w-4 h-4 text-emerald-600 group-hover:scale-110 transition-transform shrink-0" />
-                  <span>Call Us: +91 98201 23456</span>
+                  <span>Call Us: +91 79771 59187</span>
                 </a>
               </div>
 
@@ -131,11 +131,11 @@ export default function App() {
 
               <div className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 max-w-sm sm:max-w-none mx-auto">
                 <a
-                  href="tel:+919820123456"
+                  href="tel:+917977159187"
                   className="w-full sm:w-auto px-7 py-3.5 rounded-2xl font-bold text-sm bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 text-white transition shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Phone className="w-4 h-4 shrink-0" />
-                  <span>Call Us Now: +91 98201 23456</span>
+                  <span>Call Us Now: +91 79771 59187</span>
                 </a>
 
                 <button
@@ -170,7 +170,7 @@ export default function App() {
       <div className="fixed bottom-0 inset-x-0 z-40 lg:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2.5 shadow-2xl safe-area-bottom">
         <div className="max-w-md mx-auto grid grid-cols-2 gap-2.5">
           <a
-            href="tel:+919820123456"
+            href="tel:+917977159187"
             className="w-full py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm bg-emerald-600 active:bg-emerald-700 text-white flex items-center justify-center gap-1.5 shadow-md shadow-emerald-600/20 text-center"
           >
             <Phone className="w-4 h-4 shrink-0" />

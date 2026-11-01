@@ -105,12 +105,12 @@ function getInitialData(): DatabaseSchema {
   const initialUsers: User[] = [
     {
       id: 'usr_admin_01',
-      name: 'Dr. S. Pal (BDS, MDS Prosthodontics)',
+      name: 'Dr. Amit Pal (BDS, MDS Prosthodontics)',
       email: 'dr.pal@dentalclinic.com',
       passwordHash: defaultPasswordHash,
-      phone: '+91 98201 23456',
+      phone: '+91 79771 59187',
       role: 'admin',
-      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=Dr+S+Pal&backgroundColor=0284c7&textColor=ffffff',
+      avatar: 'https://api.dicebear.com/7.x/initials/svg?seed=Dr+Amit+Pal&backgroundColor=0284c7&textColor=ffffff',
       medicalNotes: 'Head Dental Surgeon & Implantologist. 15+ years experience.',
       createdAt: new Date().toISOString(),
     },
@@ -279,7 +279,7 @@ function getInitialData(): DatabaseSchema {
       toothNumbers: ['16'],
       diagnosis: 'Post-endodontic restorative protection on maxillary first molar',
       date: new Date(Date.now() - 604800000).toISOString().split('T')[0],
-      doctorName: 'Dr. S. Pal',
+      doctorName: 'Dr. Amit Pal',
       prescriptions: [
         { medicine: 'Amoxicillin 500mg', dosage: '1 tablet thrice daily', duration: '5 days' },
         { medicine: 'Zerodol-SP', dosage: '1 tablet after meals when needed', duration: '3 days' },
@@ -296,7 +296,7 @@ function getInitialData(): DatabaseSchema {
       toothNumbers: ['All Quadrants'],
       diagnosis: 'Mild gingivitis with supragingival calculus buildup',
       date: new Date(Date.now() - 864000000).toISOString().split('T')[0],
-      doctorName: 'Dr. S. Pal',
+      doctorName: 'Dr. Amit Pal',
       prescriptions: [
         { medicine: 'Thermoseal Pro Toothpaste', dosage: 'Brush gently twice daily', duration: '30 days' }
       ],
@@ -393,10 +393,10 @@ app.get('/api/clinic-info', (req, res) => {
   res.json({
     name: "Dr. Pal's Dental Clinic",
     tagline: "Advanced Dental Care & Complete Smile Restoration",
-    doctor: "Dr. S. Pal, BDS, MDS",
+    doctor: "Dr. Amit Pal, BDS, MDS",
     address: "Shop No. 5, Soniya Budhiya Compound, LT Road, opposite Railway Station, near Saikrupa Mall, Tawde Wadi, Dahisar West, Mumbai, Maharashtra 400068",
-    phone: "+91 98201 23456",
-    alternatePhone: "+91 22 2890 1234",
+    phone: "+91 79771 59187",
+    alternatePhone: "+91 79771 59187",
     email: "contact@drpalsdental.com",
     hours: {
       weekdays: "09:00 AM - 08:30 PM",
@@ -617,10 +617,27 @@ app.post('/api/appointments', (req: AuthenticatedRequest, res) => {
     db.appointments.unshift(newAppointment);
     saveDB(db);
 
+    const waText = encodeURIComponent(
+      `*New Appointment Booking - Dr. Pal's Dental Clinic*\n\n` +
+      `*Patient Name:* ${patientName.trim()}\n` +
+      `*Phone:* ${patientPhone.trim()}\n` +
+      `*Service:* ${service}\n` +
+      `*Date:* ${date}\n` +
+      `*Preferred Slot:* ${time}\n` +
+      (notes ? `*Notes/Symptoms:* ${notes}\n` : '') +
+      `*Booking ID:* ${newAppointment.id}\n\n` +
+      `Please confirm my dental appointment with Dr. Amit Pal. Thank you!`
+    );
+    const whatsappUrl = `https://wa.me/917977159187?text=${waText}`;
+
+    console.log(`[Booking Dispatch] Forwarded booking ${newAppointment.id} to Dr. Amit Pal (+91 79771 59187): ${patientName.trim()} (${patientPhone.trim()}) for ${service}`);
+
     return res.status(201).json({
       success: true,
-      message: 'Appointment scheduled successfully! Dr. Pal clinic team will verify and confirm shortly.',
+      message: 'Appointment scheduled successfully! Booking details dispatched directly to Dr. Amit Pal at +91 79771 59187.',
       appointment: newAppointment,
+      forwardedToPhone: '7977159187',
+      whatsappUrl,
     });
   } catch (err: any) {
     console.error('Booking error:', err);
@@ -723,7 +740,7 @@ app.post('/api/patients/:id/records', authenticateToken, requireAdmin, (req: Aut
       toothNumbers: toothNumbers || [],
       diagnosis: diagnosis || '',
       date: date || new Date().toISOString().split('T')[0],
-      doctorName: req.user?.name || 'Dr. S. Pal',
+      doctorName: req.user?.name || 'Dr. Amit Pal',
       prescriptions: prescriptions || [],
       cost: cost || 0,
       notes: notes || '',

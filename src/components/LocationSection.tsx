@@ -50,8 +50,8 @@ export const LocationSection: React.FC = () => {
                   </div>
                   <div>
                     <span className="text-slate-400 block text-[10px]">Primary Helpline & Appointments</span>
-                    <a href="tel:+919820123456" className="font-bold text-slate-900 hover:text-cyan-700 text-sm">
-                      +91 98201 23456
+                    <a href="tel:+917977159187" className="font-bold text-slate-900 hover:text-cyan-700 text-sm">
+                      +91 79771 59187
                     </a>
                   </div>
                 </div>

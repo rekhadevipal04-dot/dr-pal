@@ -26,7 +26,7 @@ export const AboutSection: React.FC<{ onBookClick?: () => void }> = ({ onBookCli
                     Verified Chief Dental Surgeon
                   </div>
                   <h3 className="font-serif text-xl sm:text-3xl font-bold text-white tracking-tight">
-                    Dr. S. Pal
+                    Dr. Amit Pal
                   </h3>
                   <p className="text-cyan-200 text-xs sm:text-sm font-semibold mt-0.5 sm:mt-1">
                     BDS, MDS (Prosthodontics & Oral Implantology)
@@ -72,7 +72,7 @@ export const AboutSection: React.FC<{ onBookClick?: () => void }> = ({ onBookCli
             </span>
 
             <h2 className="font-serif text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-tight">
-              Dr. S. Pal, <span className="text-cyan-700 font-sans font-normal text-xl sm:text-2xl">BDS, MDS</span>
+              Dr. Amit Pal, <span className="text-cyan-700 font-sans font-normal text-xl sm:text-2xl">BDS, MDS</span>
             </h2>
 
             <p className="text-slate-600 text-base leading-relaxed">

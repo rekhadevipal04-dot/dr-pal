@@ -103,11 +103,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
         {/* Desktop Right Action: Call Us & Book Visit */}
         <div className="hidden sm:flex items-center gap-2.5">
           <a
-            href="tel:+919820123456"
+            href="tel:+917977159187"
             className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold text-slate-700 hover:text-emerald-700 hover:bg-emerald-50 transition border border-slate-200 hover:border-emerald-300 shadow-2xs group cursor-pointer"
           >
             <Phone className="w-3.5 h-3.5 text-emerald-600 group-hover:scale-110 transition-transform" />
-            <span>Call Us: +91 98201 23456</span>
+            <span>Call Us: +91 79771 59187</span>
           </a>
 
           {/* Book Appointment CTA */}
@@ -123,7 +123,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
         {/* Mobile Header Buttons (Compact & Touch-Friendly) */}
         <div className="flex items-center gap-1.5 lg:hidden">
           <a
-            href="tel:+919820123456"
+            href="tel:+917977159187"
             className="p-2 rounded-xl text-white bg-emerald-600 active:bg-emerald-700 shadow-xs transition flex items-center justify-center shrink-0"
             aria-label="Call Dr. Pal's Dental Clinic"
           >
@@ -169,7 +169,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             className="w-full text-left py-2.5 px-3.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-cyan-50 hover:text-cyan-800 transition flex items-center gap-2.5"
           >
             <User className="w-4 h-4 text-cyan-600" />
-            <span>About Dr. S. Pal (BDS, MDS)</span>
+            <span>About Dr. Amit Pal (BDS, MDS)</span>
           </button>
           <button
             onClick={() => handleNavClick('testimonials')}
@@ -192,11 +192,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           {/* Direct Call & Book Actions in Mobile Menu */}
           <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
             <a
-              href="tel:+919820123456"
+              href="tel:+917977159187"
               className="w-full py-3 px-4 rounded-xl text-sm font-bold bg-emerald-600 active:bg-emerald-700 text-white text-center flex items-center justify-center gap-2 shadow-sm transition"
             >
               <Phone className="w-4 h-4" />
-              <span>Call Us: +91 98201 23456</span>
+              <span>Call Us: +91 79771 59187</span>
             </a>
             <button
               onClick={() => {

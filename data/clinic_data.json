@@ -2,12 +2,12 @@
   "users": [
     {
       "id": "usr_admin_01",
-      "name": "Dr. S. Pal (BDS, MDS Prosthodontics)",
+      "name": "Dr. Amit Pal (BDS, MDS Prosthodontics)",
       "email": "dr.pal@dentalclinic.com",
       "passwordHash": "$2b$10$7j5wRh5JjKv0ghAIfT6ViedVdbZg2V4p.h.lv9HV/1GYXAAYvRJmu",
-      "phone": "+91 98201 23456",
+      "phone": "+91 79771 59187",
       "role": "admin",
-      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Dr+S+Pal&backgroundColor=0284c7&textColor=ffffff",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Dr+Amit+Pal&backgroundColor=0284c7&textColor=ffffff",
       "medicalNotes": "Head Dental Surgeon & Implantologist. 15+ years experience.",
       "createdAt": "2026-10-31T19:55:27.063Z"
     },
@@ -114,7 +114,7 @@
       ],
       "diagnosis": "Post-endodontic restorative protection on maxillary first molar",
       "date": "2026-10-24",
-      "doctorName": "Dr. S. Pal",
+      "doctorName": "Dr. Amit Pal",
       "prescriptions": [
         {
           "medicine": "Amoxicillin 500mg",
@@ -145,7 +145,7 @@
       ],
       "diagnosis": "Mild gingivitis with supragingival calculus buildup",
       "date": "2026-10-21",
-      "doctorName": "Dr. S. Pal",
+      "doctorName": "Dr. Amit Pal",
       "prescriptions": [
         {
           "medicine": "Thermoseal Pro Toothpaste",

@@ -188,7 +188,7 @@ export const PatientDashboard: React.FC<PatientDashboardProps> = ({ onBookNewApp
             </div>
             <div>
               <span className="text-slate-400 block">Primary Dentist</span>
-              <span className="font-bold text-white">Dr. S. Pal, MDS</span>
+              <span className="font-bold text-white">Dr. Amit Pal, MDS</span>
             </div>
           </div>
         </div>

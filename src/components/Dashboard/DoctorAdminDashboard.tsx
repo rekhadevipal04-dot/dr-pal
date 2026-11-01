@@ -207,7 +207,7 @@ export const DoctorAdminDashboard: React.FC = () => {
                 <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-400/30">
                   Head Dental Surgeon & Administrator
                 </span>
-                <span className="text-xs text-slate-400">Dr. S. Pal, BDS, MDS</span>
+                <span className="text-xs text-slate-400">Dr. Amit Pal, BDS, MDS</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mt-1">
                 Clinical Operations & Analytics
