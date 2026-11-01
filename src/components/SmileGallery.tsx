@@ -73,34 +73,39 @@ export const SmileGallery: React.FC<{ onBookService?: (serviceName: string) => v
   };
 
   return (
-    <section id="gallery" className="py-16 lg:py-24 bg-slate-100/70 scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section id="gallery" className="py-12 sm:py-16 lg:py-24 bg-slate-100/70 scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6">
         {/* Section Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cyan-100 text-cyan-800 border border-cyan-200 mb-3">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-14">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-cyan-100 text-cyan-800 border border-cyan-200 mb-2 sm:mb-3">
             <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
             Verified Clinical Outcomes
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
             Smile Transformations & Results
           </h2>
-          <p className="mt-3 text-slate-600 text-base leading-relaxed">
+          <p className="mt-2.5 text-slate-600 text-xs sm:text-base leading-relaxed px-1">
             Drag the interactive slider sideways on each clinical case below to compare the genuine before and after results performed at Dr. Pal's Dental Clinic.
           </p>
+
+          {/* Mobile Swipe Hint */}
+          <div className="inline-flex sm:hidden items-center gap-1.5 px-3 py-1 mt-3 rounded-full text-[11px] font-semibold bg-cyan-50 text-cyan-800 border border-cyan-200 shadow-2xs">
+            <span>↔ Swipe left or right on photo to compare</span>
+          </div>
         </div>
 
         {/* Case Studies Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {CASES.map((item) => {
             const sliderPos = sliderPositions[item.id] ?? 50;
 
             return (
               <div
                 key={item.id}
-                className="bg-white rounded-3xl overflow-hidden border border-slate-200/90 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                className="bg-white rounded-3xl overflow-hidden border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
-                {/* Image Comparison Box with Interactive Slider */}
-                <div className="relative w-full aspect-16/10 overflow-hidden bg-slate-900 select-none">
+                {/* Image Comparison Box with Interactive Slider (4:3 on mobile for superior vertical detail) */}
+                <div className="relative w-full aspect-4/3 sm:aspect-16/10 overflow-hidden bg-slate-900 select-none touch-pan-y">
                   {/* After Image (Background) */}
                   <img
                     src={item.afterImg}
@@ -108,7 +113,7 @@ export const SmileGallery: React.FC<{ onBookService?: (serviceName: string) => v
                     className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
                     loading="lazy"
                   />
-                  <span className="absolute top-3 right-3 z-10 px-2.5 py-1 rounded-md text-[11px] font-bold bg-emerald-600 text-white uppercase tracking-wider shadow-sm select-none">
+                  <span className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 z-10 px-2.5 py-0.5 sm:py-1 rounded-md text-[10px] sm:text-[11px] font-bold bg-emerald-600 text-white uppercase tracking-wider shadow-sm select-none">
                     After
                   </span>
 
@@ -120,7 +125,7 @@ export const SmileGallery: React.FC<{ onBookService?: (serviceName: string) => v
                     style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
                     loading="lazy"
                   />
-                  <span className="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-md text-[11px] font-bold bg-slate-900/85 text-white uppercase tracking-wider shadow-sm select-none">
+                  <span className="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 z-10 px-2.5 py-0.5 sm:py-1 rounded-md text-[10px] sm:text-[11px] font-bold bg-slate-900/85 text-white uppercase tracking-wider shadow-sm select-none">
                     Before
                   </span>
 
@@ -129,7 +134,7 @@ export const SmileGallery: React.FC<{ onBookService?: (serviceName: string) => v
                     className="absolute top-0 bottom-0 w-0.5 bg-white shadow-2xl pointer-events-none z-20"
                     style={{ left: `${sliderPos}%` }}
                   >
-                    <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white text-cyan-800 shadow-lg flex items-center justify-center font-bold text-xs border-2 border-cyan-500">
+                    <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 sm:w-8 sm:h-8 rounded-full bg-white text-cyan-800 shadow-xl flex items-center justify-center font-bold text-xs border-2 border-cyan-500">
                       ↔
                     </div>
                   </div>
@@ -141,13 +146,13 @@ export const SmileGallery: React.FC<{ onBookService?: (serviceName: string) => v
                     max="100"
                     value={sliderPos}
                     onChange={(e) => handleSliderMove(item.id, Number(e.target.value))}
-                    className="absolute inset-0 opacity-0 cursor-ew-resize w-full h-full z-30"
+                    className="absolute inset-0 opacity-0 cursor-ew-resize w-full h-full z-30 touch-none"
                     aria-label={`Before and after slider for ${item.title}`}
                   />
                 </div>
 
                 {/* Details Card */}
-                <div className="p-6 flex-1 flex flex-col justify-between">
+                <div className="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between text-xs mb-2">
                       <span className="font-bold text-cyan-700 uppercase tracking-wider bg-cyan-50 px-2.5 py-0.5 rounded-full border border-cyan-200">

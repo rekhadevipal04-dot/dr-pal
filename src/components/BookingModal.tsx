@@ -133,22 +133,22 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200">
+      <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden max-h-[92vh] flex flex-col">
         {/* Header */}
-        <div className="bg-linear-to-r from-cyan-600 via-sky-600 to-blue-700 p-6 text-white relative">
+        <div className="bg-linear-to-r from-cyan-600 via-sky-600 to-blue-700 p-4 sm:p-6 text-white relative shrink-0">
           <button
             onClick={handleResetAndClose}
-            className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition text-white cursor-pointer"
+            className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition text-white cursor-pointer"
             aria-label="Close"
           >
             <X className="w-4 h-4" />
           </button>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/20 text-white mb-2">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/20 text-white mb-1.5">
             <Sparkles className="w-3 h-3 text-cyan-200" />
             Instant Booking Confirmation
           </span>
-          <h3 className="font-serif text-2xl font-bold">Schedule Your Dental Visit</h3>
+          <h3 className="font-serif text-xl sm:text-2xl font-bold">Schedule Your Dental Visit</h3>
           <p className="text-cyan-100 text-xs mt-0.5">
             Dr. Pal's Dental Clinic • Dahisar West, Mumbai
           </p>
@@ -210,7 +210,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             </div>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="p-6 space-y-4">
+          <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-3.5 sm:space-y-4 overflow-y-auto flex-1">
             {error && (
               <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-700 font-medium">
                 {error}

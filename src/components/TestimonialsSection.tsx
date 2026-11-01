@@ -94,72 +94,72 @@ export const TestimonialsSection: React.FC<{ onBookClick?: () => void }> = ({ on
   );
 
   return (
-    <section id="testimonials" className="py-16 lg:py-24 bg-slate-50/80 scroll-mt-20 border-t border-slate-200/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section id="testimonials" className="py-12 sm:py-16 lg:py-24 bg-slate-50/80 scroll-mt-20 border-t border-slate-200/60">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6">
         {/* Header with Google Rating Badge */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
           {/* Real Clinic Logo Showcase */}
-          <div className="inline-flex items-center justify-center p-2 rounded-2xl bg-white shadow-sm border border-slate-200/80 mb-4">
+          <div className="inline-flex items-center justify-center p-2 rounded-2xl bg-white shadow-sm border border-slate-200/80 mb-3 sm:mb-4">
             <img
               src="./dr_pals_real_logo.png"
               alt="Dr. Pal's Dental Clinic Official Logo"
-              className="h-10 w-auto object-contain"
+              className="h-8 sm:h-10 w-auto object-contain"
             />
           </div>
 
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 border border-emerald-200">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 border border-emerald-200">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-              Verified Patient Success Stories
+              Verified Patient Stories
             </span>
-            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-white text-slate-800 border border-slate-200 shadow-2xs">
+            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold bg-white text-slate-800 border border-slate-200 shadow-2xs">
               <img
                 src="https://www.google.com/favicon.ico"
                 alt="Google"
                 className="w-3.5 h-3.5 inline"
               />
-              4.9 / 5.0 Rating (300+ Reviews)
+              4.9 / 5.0 (300+ Reviews)
             </span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
             Real Patient Experiences & Reviews
           </h2>
-          <p className="mt-3 text-slate-600 text-base leading-relaxed">
+          <p className="mt-2 text-slate-600 text-xs sm:text-base leading-relaxed px-1">
             Authentic, unedited feedback from patients treated at our Dahisar West clinic. Read real stories of painless root canals, smile makeovers, and dental restorations.
           </p>
 
           {/* Direct Google Maps Link Button */}
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-4 sm:mt-5 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-3 max-w-md sm:max-w-none mx-auto">
             <a
               href={GOOGLE_MAPS_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-slate-900 bg-white hover:bg-slate-50 border border-slate-300 shadow-xs hover:shadow-md transition-all group"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-slate-900 bg-white hover:bg-slate-50 border border-slate-300 shadow-xs hover:shadow-md transition-all group"
             >
               <img
                 src="https://www.google.com/favicon.ico"
                 alt="Google Maps"
-                className="w-4 h-4"
+                className="w-4 h-4 shrink-0"
               />
               <span>View All 300+ Reviews on Google Maps</span>
-              <ExternalLink className="w-3.5 h-3.5 text-cyan-600 group-hover:translate-x-0.5 transition-transform" />
+              <ExternalLink className="w-3.5 h-3.5 text-cyan-600 group-hover:translate-x-0.5 transition-transform shrink-0" />
             </a>
 
-            <div className="flex items-center gap-1 text-amber-500 font-bold text-sm bg-white px-3.5 py-2 rounded-xl border border-slate-200">
+            <div className="inline-flex items-center justify-center gap-1 text-amber-500 font-bold text-xs sm:text-sm bg-white px-3.5 py-2 rounded-xl border border-slate-200">
               <span>★★★★★</span>
-              <span className="text-slate-800 text-xs ml-1 font-semibold">100% Verified GMB Feedback</span>
+              <span className="text-slate-800 text-xs ml-1 font-semibold">100% Genuine GMB Feedback</span>
             </div>
           </div>
 
-          {/* Filter Chips */}
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+          {/* Filter Chips (Horizontal Swipe on Mobile) */}
+          <div className="mt-5 sm:mt-6 flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-2 sm:pb-0 px-1 sm:px-0 sm:justify-center no-scrollbar -mx-2 sm:mx-0">
             {categories.map((cat) => (
               <button
                 key={cat}
                 type="button"
                 onClick={() => setActiveFilter(cat)}
-                className={`px-3 py-1.5 rounded-full text-xs font-bold capitalize transition-all cursor-pointer ${
+                className={`px-3 py-1.5 rounded-full text-xs font-bold capitalize transition-all cursor-pointer shrink-0 whitespace-nowrap ${
                   activeFilter === cat
                     ? 'bg-cyan-600 text-white shadow-xs'
                     : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-100'
@@ -172,7 +172,7 @@ export const TestimonialsSection: React.FC<{ onBookClick?: () => void }> = ({ on
         </div>
 
         {/* Reviews Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {filteredReviews.map((rev) => (
             <div
               key={rev.id}

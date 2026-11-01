@@ -115,27 +115,27 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
   const filtered = services.filter((s) => activeCategory === 'all' || s.category === activeCategory);
 
   return (
-    <section id="services" className="py-16 lg:py-24 bg-white scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cyan-100 text-cyan-800 border border-cyan-200 mb-3">
+    <section id="services" className="py-12 sm:py-16 lg:py-24 bg-white scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-cyan-100 text-cyan-800 border border-cyan-200 mb-2 sm:mb-3">
             Clinical Care Spectrum
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
             Specialized Dental Services
           </h2>
-          <p className="mt-3 text-slate-600 text-base leading-relaxed">
+          <p className="mt-2 text-slate-600 text-xs sm:text-base leading-relaxed px-1">
             World-class dental treatments with painless computerized anesthesia, German biocompatible materials, and international sterilization protocols.
           </p>
 
-          {/* Filter Pills */}
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+          {/* Filter Pills (Smooth Horizontal Thumb Swipe on Mobile, Centered on Desktop) */}
+          <div className="mt-5 sm:mt-6 flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-2 sm:pb-0 px-1 sm:px-0 sm:justify-center no-scrollbar -mx-2 sm:mx-0">
             {categories.map((cat) => (
               <button
                 key={cat}
                 type="button"
                 onClick={() => setActiveCategory(cat)}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-bold capitalize transition-all cursor-pointer ${
+                className={`px-3.5 py-1.5 rounded-full text-xs font-bold capitalize transition-all cursor-pointer shrink-0 whitespace-nowrap ${
                   activeCategory === cat
                     ? 'bg-cyan-600 text-white shadow-sm'
                     : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
@@ -148,28 +148,28 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
         </div>
 
         {/* Services Cards Grid - NO PRICING AS REQUESTED BY USER */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {filtered.map((srv) => (
             <div
               key={srv.id}
-              className="group relative bg-slate-50 hover:bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 hover:border-cyan-400 shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="group relative bg-slate-50 hover:bg-white rounded-3xl p-4 sm:p-7 border border-slate-200/80 hover:border-cyan-400 shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-start justify-between gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-cyan-100/80 text-cyan-700 flex items-center justify-center group-hover:scale-110 group-hover:bg-cyan-600 group-hover:text-white transition-all shadow-inner">
+                <div className="flex items-start justify-between gap-3 mb-3 sm:mb-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-cyan-100/80 text-cyan-700 flex items-center justify-center group-hover:scale-110 group-hover:bg-cyan-600 group-hover:text-white transition-all shadow-inner shrink-0">
                     {getIcon(srv.icon)}
                   </div>
                   {srv.badge && (
-                    <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-cyan-50 text-cyan-800 border border-cyan-200">
+                    <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-cyan-50 text-cyan-800 border border-cyan-200">
                       {srv.badge}
                     </span>
                   )}
                 </div>
 
-                <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1.5">
+                <div className="text-[11px] sm:text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">
                   {srv.category} • {srv.duration}
                 </div>
-                <h3 className="font-serif text-lg sm:text-xl font-bold text-slate-900 group-hover:text-cyan-700 transition">
+                <h3 className="font-serif text-base sm:text-xl font-bold text-slate-900 group-hover:text-cyan-700 transition leading-snug">
                   {srv.title}
                 </h3>
                 <p className="mt-2.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
