@@ -1,0 +1,245 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_01",
+      "name": "Dr. S. Pal (BDS, MDS Prosthodontics)",
+      "email": "dr.pal@dentalclinic.com",
+      "passwordHash": "$2b$10$7j5wRh5JjKv0ghAIfT6ViedVdbZg2V4p.h.lv9HV/1GYXAAYvRJmu",
+      "phone": "+91 98201 23456",
+      "role": "admin",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Dr+S+Pal&backgroundColor=0284c7&textColor=ffffff",
+      "medicalNotes": "Head Dental Surgeon & Implantologist. 15+ years experience.",
+      "createdAt": "2026-10-31T19:55:27.063Z"
+    },
+    {
+      "id": "usr_patient_01",
+      "name": "Rahul Sharma",
+      "email": "patient@example.com",
+      "passwordHash": "$2b$10$7j5wRh5JjKv0ghAIfT6ViedVdbZg2V4p.h.lv9HV/1GYXAAYvRJmu",
+      "phone": "+91 98765 43210",
+      "role": "patient",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&h=200&fit=crop&crop=faces",
+      "bloodGroup": "O+",
+      "allergies": "Penicillin (mild)",
+      "medicalNotes": "Regular patient since 2023. Completed Teeth Whitening and Crown installation.",
+      "createdAt": "2026-10-31T19:55:27.063Z"
+    },
+    {
+      "id": "usr_patient_02",
+      "name": "Priya Verma",
+      "email": "priya.v@example.com",
+      "passwordHash": "$2b$10$7j5wRh5JjKv0ghAIfT6ViedVdbZg2V4p.h.lv9HV/1GYXAAYvRJmu",
+      "phone": "+91 98111 22334",
+      "role": "patient",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces",
+      "bloodGroup": "B+",
+      "allergies": "None",
+      "medicalNotes": "Undergoing smile makeover treatment with ceramic veneers.",
+      "createdAt": "2026-10-31T19:55:27.063Z"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "apt_101",
+      "patientId": "usr_patient_01",
+      "patientName": "Rahul Sharma",
+      "patientEmail": "patient@example.com",
+      "patientPhone": "+91 98765 43210",
+      "service": "Single-Sitting Painless Root Canal",
+      "date": "2026-11-01",
+      "time": "10:30 AM",
+      "status": "confirmed",
+      "notes": "Follow-up for lower right molar treatment.",
+      "doctorNotes": "Crown fitment check scheduled. Lower molar healed nicely.",
+      "estimatedCost": 3500,
+      "paid": true,
+      "createdAt": "2026-10-29T19:55:27.063Z"
+    },
+    {
+      "id": "apt_102",
+      "patientId": "usr_patient_02",
+      "patientName": "Priya Verma",
+      "patientEmail": "priya.v@example.com",
+      "patientPhone": "+91 98111 22334",
+      "service": "Advanced Laser Teeth Whitening",
+      "date": "2026-11-02",
+      "time": "02:00 PM",
+      "status": "pending",
+      "notes": "Consultation before upcoming wedding event.",
+      "doctorNotes": "Assess baseline shade guide and gum health first.",
+      "estimatedCost": 4500,
+      "paid": false,
+      "createdAt": "2026-10-31T19:55:27.063Z"
+    },
+    {
+      "id": "apt_103",
+      "patientId": "usr_patient_01",
+      "patientName": "Rahul Sharma",
+      "patientEmail": "patient@example.com",
+      "patientPhone": "+91 98765 43210",
+      "service": "Ultrasonic Scaling & Air-Flow Polishing",
+      "date": "2026-10-21",
+      "time": "11:00 AM",
+      "status": "completed",
+      "notes": "Routine 6-month preventive cleaning.",
+      "doctorNotes": "Plaque removed completely. Fluoride protective coat applied.",
+      "estimatedCost": 1200,
+      "paid": true,
+      "createdAt": "2026-10-20T19:55:27.063Z"
+    },
+    {
+      "id": "apt_104",
+      "patientName": "Anjali Desai",
+      "patientEmail": "anjali.d@gmail.com",
+      "patientPhone": "+91 99200 44556",
+      "service": "Permanent Titanium Dental Implants",
+      "date": "2026-11-03",
+      "time": "04:30 PM",
+      "status": "confirmed",
+      "notes": "Left upper molar replacement enquiry.",
+      "doctorNotes": "CBCT 3D Scan reviewed. Good bone density for single-stage implant.",
+      "estimatedCost": 18000,
+      "paid": false,
+      "createdAt": "2026-10-31T19:55:27.063Z"
+    }
+  ],
+  "records": [
+    {
+      "id": "rec_01",
+      "patientId": "usr_patient_01",
+      "patientName": "Rahul Sharma",
+      "procedure": "Zirconia Ceramic Crown Placement",
+      "toothNumbers": [
+        "16"
+      ],
+      "diagnosis": "Post-endodontic restorative protection on maxillary first molar",
+      "date": "2026-10-24",
+      "doctorName": "Dr. S. Pal",
+      "prescriptions": [
+        {
+          "medicine": "Amoxicillin 500mg",
+          "dosage": "1 tablet thrice daily",
+          "duration": "5 days"
+        },
+        {
+          "medicine": "Zerodol-SP",
+          "dosage": "1 tablet after meals when needed",
+          "duration": "3 days"
+        },
+        {
+          "medicine": "Chlorhexidine Mouthwash",
+          "dosage": "10ml rinse twice daily",
+          "duration": "7 days"
+        }
+      ],
+      "cost": 6500,
+      "notes": "Fit and occlusion calibrated with articulating paper. Perfect margin seal."
+    },
+    {
+      "id": "rec_02",
+      "patientId": "usr_patient_01",
+      "patientName": "Rahul Sharma",
+      "procedure": "Deep Ultrasonic Scaling & Stain Removal",
+      "toothNumbers": [
+        "All Quadrants"
+      ],
+      "diagnosis": "Mild gingivitis with supragingival calculus buildup",
+      "date": "2026-10-21",
+      "doctorName": "Dr. S. Pal",
+      "prescriptions": [
+        {
+          "medicine": "Thermoseal Pro Toothpaste",
+          "dosage": "Brush gently twice daily",
+          "duration": "30 days"
+        }
+      ],
+      "cost": 1200,
+      "notes": "Gums healthy post-scaling. Recommended next review after 6 months."
+    }
+  ],
+  "toothCharts": {
+    "usr_patient_01": {
+      "15": {
+        "number": 15,
+        "status": "treated",
+        "notes": "Composite filling"
+      },
+      "16": {
+        "number": 16,
+        "status": "crown",
+        "notes": "Zirconia Crown placed Oct 2026"
+      },
+      "24": {
+        "number": 24,
+        "status": "healthy",
+        "notes": "Checked normal"
+      },
+      "36": {
+        "number": 36,
+        "status": "treated",
+        "notes": "Root canal treated"
+      }
+    }
+  },
+  "services": [
+    {
+      "id": "srv_whitening",
+      "title": "Advanced Laser Teeth Whitening",
+      "description": "Instant 4-8 shades lighter smile in a single 45-minute painless session with Philips Zoom technology.",
+      "price": "\u20b94,500",
+      "duration": "45 mins",
+      "category": "Cosmetic",
+      "badge": "Most Popular",
+      "icon": "Sparkles"
+    },
+    {
+      "id": "srv_rct",
+      "title": "Single-Sitting Painless Root Canal",
+      "description": "Precision rotary endodontics with 3D apex locator and digital X-ray verification for zero discomfort.",
+      "price": "\u20b93,500",
+      "duration": "60 mins",
+      "category": "Endodontics",
+      "badge": "Pain-Free",
+      "icon": "Activity"
+    },
+    {
+      "id": "srv_implants",
+      "title": "Permanent Titanium Dental Implants",
+      "description": "Bio-compatible Swiss titanium implants restoring natural bite strength with lifetime warranty.",
+      "price": "\u20b918,000",
+      "duration": "90 mins",
+      "category": "Surgery",
+      "badge": "Lifetime Warranty",
+      "icon": "ShieldCheck"
+    },
+    {
+      "id": "srv_smile",
+      "title": "Digital Smile Restoration & Veneers",
+      "description": "Ultra-thin E-max porcelain veneers custom designed to correct gaps, chips, and misalignment.",
+      "price": "\u20b97,500 / tooth",
+      "duration": "60 mins",
+      "category": "Cosmetic",
+      "badge": "Celebrity Choice",
+      "icon": "Smile"
+    },
+    {
+      "id": "srv_cleaning",
+      "title": "Ultrasonic Scaling & Air-Flow Polishing",
+      "description": "Deep calculus and stain removal, gum detox treatment, and fluoride varnish protective shield.",
+      "price": "\u20b91,200",
+      "duration": "30 mins",
+      "category": "Preventive",
+      "icon": "Zap"
+    },
+    {
+      "id": "srv_aligners",
+      "title": "Invisible Clear Aligners (Orthodontics)",
+      "description": "Custom 3D-scanned transparent aligners that straighten teeth without metallic wires or brackets.",
+      "price": "\u20b935,000",
+      "duration": "45 mins",
+      "category": "Orthodontics",
+      "badge": "Discreet",
+      "icon": "Layers"
+    }
+  ]
+}

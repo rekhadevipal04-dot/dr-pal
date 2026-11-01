@@ -1,0 +1,6 @@
+{
+  "name": "Dr. Pal's Dental Clinic & Patient Care Portal",
+  "description": "Premium Dental Clinic website with interactive walkthroughs, appointment booking, secure JWT authentication, and comprehensive patient & clinic data dashboards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
